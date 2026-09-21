@@ -25,7 +25,6 @@ def max(qty=[],unc=[]):
 
 # Linear function to pass to odr_fit
 def lin(x,beta):
-    print(type(beta),beta)
     a,b = beta
     return a * x + b
 
@@ -127,4 +126,13 @@ dva,dvb = np.sqrt(np.diag(pcov))
 # Compute planck constant
 h = va * 1.602 # h*10^(-28) to convert to SI
 dh = dva * 1.602 
-print(h,dh)
+
+w = -vb * 1.602 # W*10^(-28) to convert to SI
+dw = dvb * 1.602
+
+print(f"V0: {v0}")
+print(f"Uncert. V0: {dv0}")
+print(f"h: {h:.4f}")
+print(f"Uncert. h: {dh:.4f}")
+print(f"W: {w:.4f}")
+print(f"Uncert. W: {dw:.4f}")
