@@ -132,7 +132,7 @@ dw = dvb * 1.602
 
 print(f"V0: {v0}")
 print(f"Uncert. V0: {dv0}")
-print(f"h: {h:.4f}")
-print(f"Uncert. h: {dh:.4f}")
+print(f"h: {h}")
+print(f"Uncert. h: {dh}")
 print(f"W: {w:.4f}")
 print(f"Uncert. W: {dw:.4f}")
