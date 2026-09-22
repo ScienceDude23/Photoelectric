@@ -29,7 +29,7 @@ def lin(x,beta):
     return a * x + b
 
 # Linear function to pass to curve_fit (different syntax required)
-def lin_cf(x,a,b):
+def lin_cf(x,a,b): # curve_fit requires separate parameters
     return a * x + b
 
 # Find the stopping potential V0 from the 2 lin regs of I vs V
@@ -57,13 +57,13 @@ for i in range(n):
 
 # Run min and max to get data to pass to lin regs
 rmi,drmi = min(red,dr)
-gmi,dgmi = min(green,dr)
-bmi,dbmi = min(blue,dr)
+gmi,dgmi = min(green,dg)
+bmi,dbmi = min(blue,db)
 dmi,ddmi = min(ret,dd)
 
 rma,drma = max(red,dr)
-bma,dbma = max(blue,dr)
-gma,dgma = max(green,dr)
+bma,dbma = max(blue,dg)
+gma,dgma = max(green,db)
 dma,ddma = max(ret,dd)
 
 # Run the lin regs of I vs V with Orthogonal Distance Regression (ODS)
