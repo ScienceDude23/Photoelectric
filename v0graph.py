@@ -116,11 +116,11 @@ v0_b,dv0_b = V0(ba,bb,bc,bd,bda,bdb,bdc,bdd)
 v0 = [v0_r,v0_g,v0_b] # volts
 dv0 = [dv0_r,dv0_g,dv0_b]
 wl = np.array([630,521,466]) # nanometers
-nu = 299792458 / wl # gigahertz
+nu = 299792.458 / wl # terahertz
 
 plt.figure(dpi=300)
 plt.errorbar(nu,v0,yerr=dv0)
-plt.xlabel("Frequency (GHz)")
+plt.xlabel("Frequency (THz)")
 plt.ylabel("Stopping Potential (V)")
 plt.title("Stopping Potential vs. Frequency")
 plt.savefig('v0graph.png')
