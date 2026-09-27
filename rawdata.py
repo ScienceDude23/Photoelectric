@@ -45,11 +45,11 @@ plt.savefig("rawdata.png")
 plt.close()
 
 plt.figure(dpi=300)
-plt.plot(ret,red2,label="Red",
+plt.errorbar(ret,red2,xerr=dd,yerr=dr,label="Red",
          color='red')
-plt.plot(ret,green2,label="Green",
+plt.errorbar(ret,green2,xerr=dd,yerr=dg,label="Green",
          color='green')
-plt.plot(ret,blue,label="Blue",
+plt.errorbar(ret,blue,xerr=dd,yerr=db,label="Blue",
          color='blue')
 plt.xlabel("Retarding Potential (V)")
 plt.ylabel("Current (nA)")
