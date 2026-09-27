@@ -27,27 +27,16 @@ ret_u,red_u,green_u,blue_u,dd_u,dr_u,dg_u,db_u = loadData("dataset_orig.csv")
 ret_m,red_m,green_m,blue_m,dd_m,dr_m,dg_m,db_m = loadData("dataset_mod.csv")
 
 
-fig, (mod, unm) = plt.subplots(1,2,figsize=(12,5),dpi=300)
+plt.figure()
 
-mod.errorbar(ret_u,red_u,xerr=dd_u,yerr=dr_u,
-             color='red', label='Red')
-mod.errorbar(ret_u,green_u,xerr=dd_u,yerr=dg_u,
-             color='green', label='Green')
-mod.errorbar(ret_u,blue_u,xerr=dd_u,yerr=db_u,
-             color='blue', label='Blue')
-mod.set_xlabel("Retarding Potential (V)")
-mod.set_ylabel("Current (nA)")
-mod.set_title("Unmodified data")
-mod.legend()
-
-unm.errorbar(ret_u,red_u,xerr=dd_u,yerr=dr_u,
-             color='red', label='Red')
-unm.errorbar(ret_u,green_u,xerr=dd_u,yerr=dg_u,
-             color='green', label='Green')
-unm.errorbar(ret_u,blue_m,xerr=dd_u,yerr=db_m,
-             color='blue', label='Blue')
-unm.set_xlabel("Retarding Potential(V)")
-unm.set_title("Modified data")
-unm.legend()
-
+plt.errorbar(ret_u,blue_u,xerr=dd_u,yerr=db_u,
+             color='blue', label='Unmodified',
+             linestyle='-')
+plt.errorbar(ret_u,blue_m,xerr=dd_u,yerr=db_m,
+             color='blue', label='Modified',
+             linestyle='--')
+plt.xlabel("Retarding Potential (V)")
+plt.ylabel("Current (nA)")
+plt.title("Modified vs Unmodified Blue Light Values")
+plt.legend()
 plt.savefig('modcomp.png')
