@@ -41,11 +41,12 @@ mod.set_title("Unmodified data")
 mod.legend()
 
 unm.errorbar(ret_u,red_u,xerr=dd_u,yerr=dr_u,
-             color='red', label='Red (630 nm)')
+             color='red', label='Red')
 unm.errorbar(ret_u,green_u,xerr=dd_u,yerr=dg_u,
-             color='green', label='Green (521 nm)')
+             color='green', label='Green')
 unm.errorbar(ret_u,blue_m,xerr=dd_u,yerr=db_m,
-             color='blue', label='Blue (466 nm)')
+             color='blue', label='Blue')
+unm.set_xlabel("Retarding Potential(V)")
 unm.set_title("Modified data")
 unm.legend()
 
