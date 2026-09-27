@@ -27,16 +27,16 @@ for i in range(n):
     db.append((dr[i]+dg[i]) / 2) # Uncert in blue, averaged the red and green values since only 1 trial
 
 plt.figure(dpi=300)
-plt.errorbar(ret,red1,label="Red Trial 1",
-         color='red', linestyle='-',xerr=dd)
-plt.errorbar(ret,red2,label="Red Trial 2",
-         color='red', linestyle='--',xerr=dd)
-plt.errorbar(ret,green1,label="Green Trial 1",
-         color='green', linestyle='-',xerr=dd)
-plt.errorbar(ret,green2,label="Green Trial 2",
-         color='green', linestyle='--',xerr=dd)
-plt.errorbar(ret,blue,label="Blue Trial",
-         color='blue', linestyle='-',xerr=dd)
+plt.plot(ret,red1,label="Red Trial 1",
+         color='red', linestyle='-')
+plt.plot(ret,red2,label="Red Trial 2",
+         color='red', linestyle='--')
+plt.plot(ret,green1,label="Green Trial 1",
+         color='green', linestyle='-')
+plt.plot(ret,green2,label="Green Trial 2",
+         color='green', linestyle='--')
+plt.plot(ret,blue,label="Blue Trial",
+         color='blue', linestyle='-')
 plt.xlabel("Retarding Potential (V)")
 plt.ylabel("Current (nA)")
 plt.title("Raw Trials")
