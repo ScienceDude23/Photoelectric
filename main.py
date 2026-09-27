@@ -124,11 +124,11 @@ va,vb = popt
 dva,dvb = np.sqrt(np.diag(pcov))
 
 # Compute planck constant
-h = va * 1.602 # h*10^(-28) to convert to SI
-dh = dva * 1.602 
+h = va # eV
+dh = dva # eV
 
-w = -vb * 1.602 # W*10^(-28) to convert to SI
-dw = dvb * 1.602
+w = -vb # eV
+dw = dvb # eV
 
 print(f"V0: {v0}")
 print(f"Uncert. V0: {dv0}")
