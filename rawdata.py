@@ -28,15 +28,15 @@ for i in range(n):
 
 plt.figure(dpi=300)
 plt.errorbar(ret,red1,label="Red Trial 1",
-         color='red', linestyle='-')
+         color='red', linestyle='-',xerr=dd)
 plt.errorbar(ret,red2,label="Red Trial 2",
-         color='red', linestyle='--')
+         color='red', linestyle='--',xerr=dd)
 plt.errorbar(ret,green1,label="Green Trial 1",
-         color='green', linestyle='-')
+         color='green', linestyle='-',xerr=dd)
 plt.errorbar(ret,green2,label="Green Trial 2",
-         color='green', linestyle='--')
+         color='green', linestyle='--',xerr=dd)
 plt.errorbar(ret,blue,label="Blue Trial",
-         color='blue', linestyle='-')
+         color='blue', linestyle='-',xerr=dd)
 plt.xlabel("Retarding Potential (V)")
 plt.ylabel("Current (nA)")
 plt.title("Raw Trials")
