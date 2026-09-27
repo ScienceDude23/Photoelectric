@@ -4,7 +4,7 @@ from matplotlib import pyplot as plt
 from odrpack import odr_fit
 
 # Load data
-data = np.loadtxt("dataset.csv", delimiter=",", skiprows=2,dtype=float)
+data = np.loadtxt("dataset_mod.csv", delimiter=",", skiprows=2,dtype=float)
 n = len(data[:,0])
 
 # Takes the first 5 data points for first lin reg
