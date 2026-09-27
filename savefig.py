@@ -30,7 +30,7 @@ ret_m,red_m,green_m,blue_m,dd_m,dr_m,dg_m,db_m = loadData("dataset_mod.csv")
 plt.figure()
 
 plt.errorbar(ret_u,blue_u,xerr=dd_u,yerr=db_u,
-             color='blue', label='Unmodified',
+             color='cyan', label='Unmodified',
              linestyle='-')
 plt.errorbar(ret_u,blue_m,xerr=dd_u,yerr=db_m,
              color='blue', label='Modified',
