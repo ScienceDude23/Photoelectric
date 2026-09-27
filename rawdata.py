@@ -1,7 +1,7 @@
 import numpy as np
 from matplotlib import pyplot as plt
 
-data = np.loadtxt("dataset_orig.csv",delimiter=",",skiprows=2,dtype=float)
+data = np.loadtxt("dataset_mod.csv",delimiter=",",skiprows=2,dtype=float)
 n = len(data[:,0])
 
 
